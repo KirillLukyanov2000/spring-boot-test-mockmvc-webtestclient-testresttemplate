@@ -15,25 +15,25 @@ import org.springframework.web.util.UriComponentsBuilder;
 @RequestMapping("/api/customers")
 public class CustomerController {
 
-  private static final List<Customer> CUSTOMER_LIST = new ArrayList<>(
-    List.of(new Customer("Duke", "Java", 42L))
-  );
+    private static final List<Customer> CUSTOMER_LIST = new ArrayList<>(
+            List.of(new Customer("Kirill", "Lukyanov", 1L))
+    );
 
-  @GetMapping
-  public List<Customer> getAllCustomers() {
-    return CUSTOMER_LIST;
-  }
+    @GetMapping
+    public List<Customer> getAllCustomers() {
+        return CUSTOMER_LIST;
+    }
 
-  @PostMapping
-  public ResponseEntity<Void> createCustomer(
-    @RequestBody Customer customer,
-    UriComponentsBuilder uriComponentsBuilder) {
+    @PostMapping
+    public ResponseEntity<Void> createCustomer(
+            @RequestBody Customer customer,
+            UriComponentsBuilder uriComponentsBuilder) {
 
-    CUSTOMER_LIST.add(customer);
+        CUSTOMER_LIST.add(customer);
 
-    return ResponseEntity
-      .created(uriComponentsBuilder.path("/api/customers/{id}")
-        .buildAndExpand(customer.id()).toUri())
-      .build();
-  }
+        return ResponseEntity
+                .created(uriComponentsBuilder.path("/api/customers/{id}")
+                        .buildAndExpand(customer.id()).toUri())
+                .build();
+    }
 }

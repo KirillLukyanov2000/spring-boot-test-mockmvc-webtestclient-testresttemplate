@@ -44,7 +44,7 @@ class CustomerControllerTestRestTemplateTest {
     HttpEntity<String> requestEntity = new HttpEntity<>("{\n" +
                                                         "  \"firstName\": \"Mike\",\n" +
                                                         "  \"lastName\": \"Thomson\",\n" +
-                                                        "  \"id\": 43\n" +
+                                                        "  \"id\": 3\n" +
                                                         " }\n",
       requestHeaders
     );

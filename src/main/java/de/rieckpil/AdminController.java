@@ -11,7 +11,7 @@ public class AdminController {
 
   @GetMapping
   public String getAdminView(Model model) {
-    model.addAttribute("secretMessage", "Duke 42");
+    model.addAttribute("secretMessage", "Kirill Lukyanov");
     return "admin";
   }
 }

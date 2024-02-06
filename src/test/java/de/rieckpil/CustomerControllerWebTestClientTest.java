@@ -42,7 +42,7 @@ class CustomerControllerWebTestClientTest {
       .bodyValue("  {\n" +
                  " \"firstName\": \"Mike\",\n" +
                  " \"lastName\": \"Thomson\",\n" +
-                 " \"id\": 43\n" +
+                 " \"id\": 3\n" +
                  "}\n")
       .header(HttpHeaders.CONTENT_TYPE, APPLICATION_JSON_VALUE)
       .exchange()

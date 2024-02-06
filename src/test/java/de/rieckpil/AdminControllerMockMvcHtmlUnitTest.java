@@ -35,6 +35,6 @@ class AdminControllerMockMvcHtmlUnitTest {
     HtmlPage page = htmlUnitWebClient.getPage("/admin");
     DomElement secretMessageElement = page.getElementById("secret-message");
     String visibleText = secretMessageElement.getVisibleText();
-    assertEquals("Duke 42", visibleText);
+    assertEquals("Kirill Lukyanov", visibleText);
   }
 }
